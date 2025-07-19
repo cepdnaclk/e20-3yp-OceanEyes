@@ -32,8 +32,33 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 </head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".mySwiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+    });
+  });
+</script>
+
 
 <body>
 
@@ -129,6 +154,7 @@
               <div class="row">
                 <div class="col-md-6 ">
                   <div class="detail-box">
+                    <img src="images/logowhite.png" alt="OceanEyes Logo" style="max-height: 250px; margin-bottom: -20px; margin-left: 12px;">              
                     <h1>
                       OceanEyes
                     </h1>
@@ -152,6 +178,7 @@
               <div class="row">
                 <div class="col-md-6 ">
                   <div class="detail-box">
+                    <img src="images/logowhite.png" alt="OceanEyes Logo" style="max-height: 250px; margin-bottom: -20px; margin-left: 12px;">                    
                     <h1>
                       OceanEyes
                     </h1>
@@ -190,209 +217,235 @@
         <h2>
           Introduction
         </h2>
-        <br>
+        <br><br><br>
 <!--         <p>
           The world is facing a serious marine pollution problem, with large amounts of garbage, especially plastic, polluting the seas. To address this issue, we came up with the idea of developing “OceanEyes”, an innovative system designed to monitor and analyze sea pollution levels and sea state in real time. By combining various sensor inputs and data analytics, we aim to utilize specialized software to process and analyze the collected data. This approach enables the generation of actionable insights to protect marine ecosystems.
         </p> -->
-        <p>Every year, approximately 8 million metric tons of plastic enter the oceans, highlighting a serious global
-          marine pollution crisis. This issue is primarily driven by poor waste management, low recycling rates, and 
-          incidents such as shipping accidents. Marine pollution causes a huge threat to marine life, ecosystems, and 
-          the livelihoods of coastal communities. To safeguard the marine environment and support these communities, 
-          there is an urgent need for effective methods to monitor and clean up pollution. Sri Lanka is identified as 
-          one of the top contributors to marine pollution. To better understand the practical challenges and needs, 
-          we gathered user requirements from both private and public sector ocean authorities. Their feedback confirmed 
-          that detecting marine debris in the country remains a significant challenge, as it is currently done manually 
-          through on-site observation of floating waste. Moreover, there is no system in place to track the flow of waste 
-          from rivers into the ocean, which is one of the key sources of marine pollution. 
-          <br>
-          The lack of continuous, real-time monitoring further worsens the situation, making it difficult to respond effectively. 
-          This clearly reveals a significant gap in our efforts to manage and mitigate marine pollution, emphasizing the urgent 
-          need for an innovative solution.
+        <p style="font-size: 16px; line-height: 1.8;">
+          Every year, around 8 million metric tons of plastic enter our oceans, 
+          posing a serious threat to marine life, ecosystems, and coastal communities.
+          Poor waste management, low recycling rates, and incidents like shipping accidents 
+          only make the problem worse.
         </p>
-        <br><br>
-        <p>
-          To address this issue, we came up with the idea of developing a sea pollution detection device called OceanEyes. 
-          OceanEyes is an innovative system designed to detect and monitor marine pollution in real time by integrating loT 
-          technology, image classification, and geospatial mapping. The system comprises a smart device and a cloud-based 
-          software platform that work together to provide a detailed overview of pollution in oceans, coastal areas, and rivers. 
-          The device, built using a Raspberry Pi, is equipped with an ultrasonic sensor and a camera module, and is designed as 
-          a floating buoy that can be deployed in rivers, ocean and near shorelines. It continuously scans the water surface for 
-          floating obstacles, and when one is detected, the camera captures an image. This image is then analyzed using a pre-trained 
-          classification model to identify whether the object is plastic waste, general garbage, or a non-polluting obstacle. 
-          Each detection is tagged with GPS coordinates and a timestamp, and the data is transmitted to the OceanEyes platform.
-          The platform presents this information on an interactive map, allowing users to view the location, image, classification, 
-          and time of each detection.
-          This enables environmental authorities and organizations to identify highly polluted areas, track pollution flow from rivers 
-          to the sea, and plan effective cleanup operations.
-          OceanEyes not only automates pollution detection but also acts as an early warning system, addressing the limitations of manual monitoring. 
-          The solution is scalable, allowing multiple devices to be deployed in different locations and integrated into a 
-          centralized dashboard for broader environmental monitoring.
-          The target users of the system are Ocean Conservationists, nature enthusiasts, and researchers. 
-          We hope that OceanEyes would help users by providing them with real-time, actionable insights to protect 
-          marine ecosystems more efficiently.
+        <p style="font-size: 16px; line-height: 1.8;">
+          Sri Lanka is among the top contributors to marine pollution. 
+          After speaking with both public and private ocean authorities, 
+          we found that detecting marine debris here is still done manually by visually 
+          spotting waste in the water. There’s also no system to monitor how pollution 
+          flows from rivers into the ocean, which is a major source of the problem.      
+          The lack of real-time, continuous monitoring makes it hard to respond quickly 
+          or plan effective clean-up efforts. That’s why we developed <strong>OceanEyes</strong>, a smart 
+          solution designed to detect and track marine pollution in real time.<br><br><br>
         </p>
-        <br><br>
+       
+        <br>
         <iframe width="1000" height="500"
           src="https://www.youtube.com/embed/sN_3vdVXVIc" 
           frameborder="0" 
           allowfullscreen>
         </iframe>
-        
       </div>      
     </div>
   </div>
 </section>
+<!-- end Introduction section -->
 
-<!-- OceanEyes Buoy Section -->
-<section class="why_section layout_padding">
+<!-- features section -->
+<section class="about_section" style="padding: 40px 0;">
   <div class="container">
-    <div class="heading_container heading_center">
-      <h2>
-        OceanEyes <span>Buoy</span>
-      </h2>
+    <div class="heading_container heading_center" style="margin-bottom: 30px;">
+      <h2>Features</h2>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 40px;">
-      <img src="images/bouy.JPG" alt="OceanEyes Buoy" style="max-width: 100%; height: auto; width: 600px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+
+    <div class="row">
+
+      <!-- Feature 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/w1.png" alt="">
+          <div>
+            <h4>Pollution Detection</h4>
+            <p>The system detects plastic waste and debris in water and pinpoints their locations, sharing the data with relevant authorities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/w2.png" alt="">
+          <div>
+            <h4>Sea State Monitoring</h4>
+            <p>Uses an accelerometer to assess sea conditions and determine whether the sea is calm or rough.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/w3.png" alt="">
+          <div>
+            <h4>Data Accessibility</h4>
+            <p>Visualizes polluted locations through an intuitive platform accessible by governments, researchers, and the public.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/w4.png" alt="">
+          <div>
+            <h4>Environmental Impact</h4>
+            <p>Shares data to increase awareness and helps develop targeted solutions to reduce marine pollution.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-
-<!-- end Introduction section -->
-
-
-  <!-- Services section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          Our <span>Services</span>
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/w1.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Pollution Detection
-            </h3>
-            <p>
-              The system enables the detection of plastic waste, polythene, and debris in the water, and it pinpoints the locations of these materials, delivering this information to the relevant authorities.
-            </p>
-            <!-- <a href="">
-              Read More
-            </a> -->
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/w2.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Sea State Monitoring            
-            </h3>
-            <p>
-              The system is designed to detect and assess the sea state by utilizing an accelerometer, which gauges the conditions of the sea and determines whether it is calm or rough.
-            </p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/w3.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Data Accessibility            
-            </h3>
-            <p>
-              Offers visual representations of locations of areas with pollutants via an intuitive software platform accessible to governments, researchers, and the public for better decision-making.            
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/w4.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Environmental Impact            
-            </h3>
-            <p>
-              Promotes awareness and accountability by sharing data with stakeholders and aids in developing targeted solutions to combat pollution.    
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- end sevices section -->
+<!-- end features section -->
 
   <!-- why section -->
-
   <section class="why_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
           Solution <span>Architecture</span>
         </h2>
-        <div class="bg_img_box">
-          <img src="images/solarchi.JPG" alt="" style="margin-top: 30px; margin-bottom: 35px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; margin-top: 30px; margin-bottom: 35px;">
+          <div style="flex: 1;">
+            <img src="images/solarchi.png" alt="Solution Architecture" style="width: 700px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          </div>
+          <div style="flex: 1;>
+          <p style="font-size: 16px; line-height: 1.8;">
+            The OceanEyes system combines hardware and cloud-based software to deliver real-time marine pollution monitoring. 
+            A floating buoy equipped with a camera, sensors, and a Raspberry Pi collects data from the ocean surface. 
+            This data is transmitted to a cloud backend built with Spring Boot and MongoDB. Image processing, 
+            powered by Python, detects pollutants while the frontend, developed using React displays this 
+            information through a user-friendly web application. Hosted on AWS, the platform ensures that users, including authorities and 
+            researchers, can access accurate and timely environmental insights from anywhere.  
+          </p>
+          </div>
         </div>
       </div>
+
+      <!-- OceanEyes Buoy Section -->
+      <section class="why_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              OceanEyes <span>Buoy</span>
+            </h2>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
+            <img src="images/3D_Design.png" alt="OceanEyes Buoy" style="width: 250px; height: auto; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            <img src="images/design2.png" alt="OceanEyes Buoy Side" style="width: 500px; height: auto; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            <img src="images/bouy.JPG" alt="OceanEyes Internal View" style="width: 250px; height: auto; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+          </div>
+          <p><br>The OceanEyes buoy is built using a custom 3D design that gives it a stable, low-drag shape perfect for floating steadily 
+            in sea conditions. It's lightweight, and water-resistant, so it doesn't absorb moisture and can stay out at sea for long periods
+            without trouble.
+          </p>
+        </div>
+      </section>
+
+      <!-- Hardware Design Section -->
+      <section class="why_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              Hardware <span>Design</span>
+            </h2>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
+            <img src="images/cct1.jpg" alt="OceanEyes Buoy" style="width: 500px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            <img src="images/cct2.jpg" alt="OceanEyes Buoy Side" style="width: 700px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            </div>
+          <p><br>The OceanEyes buoy is powered by a Raspberry Pi and equipped with essential modules like GPS, GSM, 
+            and sensors for detection and communication. It runs on a solar-powered battery system, making it energy-efficient and ideal for long-term deployment in the ocean. 
+            The setup ensures reliable data collection and transmission with minimal maintenance.
+          </p>
+        </div>
+      </section>
+
+      <!-- Data Flow Section -->
+       <section class="why_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              Data <span>Flow</span>
+            </h2></div>
+            <div class="flow-diagram" style="display: flex; justify-content: center; margin-top: 40px; gap: 60px; flex-wrap: wrap;">
+      
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <img src="images/DataFlow.png" alt="Step 1" style="height: 350px;">
+        </div>
+        <p>ADD A DESCRIPTION</p>
+      </div>
+      </div>
+    </section>
+
+      <!-- Web Application Section -->
+      <section class="why_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              Software <span>Design</span>
+            </h2>
+          </div>
+
+          <div class="swiper mySwiper" style="padding-top: 40px;">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/website1.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website2.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website3.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website4.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website5.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website6.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website7.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website8.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/website9.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <!-- Add more slides as needed -->
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+
+
+       <!-- Demonstration Section -->
+      <section class="why_section layout_padding">
+        <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Data <span>Flow</span>
+          Demonstration
         </h2></div>
       <div class="flow-diagram" style="display: flex; justify-content: center; margin-top: 40px; gap: 60px; flex-wrap: wrap;">
-      <!-- Step 1 -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="images/cf1.JPG" alt="Step 1" style="height: 350px;">
-    <img src="images/arrow.png" alt="Arrow" style="height: 40px; margin-top: 5px;">
-  </div>
-
-  <!-- Step 2 -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="images/cf2.JPG" alt="Step 2" style="height: 350px;">
-    <img src="images/arrow.png" alt="Arrow" style="height: 40px; margin-top: 5px;">
-  </div>
-
-  <!-- Step 3 -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="images/cf3.JPG" alt="Step 3" style="height: 350px; margin-bottom: 30px;">
-    <!-- No arrow here since it's the last step -->
-  </div>
-</div>
       
-          <div class="heading_container heading_center" style="margin-top: 55px;">
-        <h2>
-          Testing <span>Plan</span>
-        </h2></div>
-        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
+      
+        
+      </div>
+      </div>
+    </section>
+
+
+  <!-- Testing Section -->
+    <div class="container">
+      <div class="heading_container heading_center" style="margin-top: 55px;">
+    <h2>
+      Testing <span>Plan</span>
+    </h2></div>
+    <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
 
   <!-- Hardware Testing -->
   <div style="text-align: center; margin-top: 20px;">
@@ -416,15 +469,10 @@
     <h5>Performace Testing</h5>
     <img src="images/test4.jpg" alt="Software Testing" style="max-width: 100%; height: 350px; width: 500px;">
   </div>
-
+</div>
 </div>
         </div>
       </div>
-<!--       <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div> -->
     </div>
   </section>
 
@@ -483,23 +531,23 @@
               <tr>
                 <td style="border: 1px solid #888; padding: 10px;">Waterproof Ultrasound Sensor</td>
                 <td style="border: 1px solid #888; padding: 10px;">JSN-SR04T Waterproof Ultrasonic Distance Measuring Module</td>
-                <td style="border: 1px solid #888; padding: 10px;">1,760.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">2380.00</td>
                 <td style="border: 1px solid #888; padding: 10px;">1</td>
-                <td style="border: 1px solid #888; padding: 10px;">1,760.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">2380.00</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #888; padding: 10px;">Servo Motor</td>
-                <td style="border: 1px solid #888; padding: 10px;">SG90 9G Micro Servo Motor</td>
-                <td style="border: 1px solid #888; padding: 10px;">350.00</td>
-                <td style="border: 1px solid #888; padding: 10px;">2</td>
-                <td style="border: 1px solid #888; padding: 10px;">700.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">TD-8120MG Waterproof Digital Servo</td>
+                <td style="border: 1px solid #888; padding: 10px;">3750.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">1</td>
+                <td style="border: 1px solid #888; padding: 10px;">3750.00</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #888; padding: 10px;">Battery</td>
                 <td style="border: 1px solid #888; padding: 10px;">3.7V 1800mA 18650 Li-ion Rechargeable Battery</td>
-                <td style="border: 1px solid #888; padding: 10px;">350.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">690.00</td>
                 <td style="border: 1px solid #888; padding: 10px;">2</td>
-                <td style="border: 1px solid #888; padding: 10px;">700.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">1380.00</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #888; padding: 10px;">Battery Charging Module</td>
@@ -522,11 +570,18 @@
                 <td style="border: 1px solid #888; padding: 10px;">2</td>
                 <td style="border: 1px solid #888; padding: 10px;">800.00</td>
               </tr>
+              <tr>
+                <td style="border: 1px solid #888; padding: 10px;">Outer cover - top lid</td>
+                <td style="border: 1px solid #888; padding: 10px;">3D print</td>
+                <td style="border: 1px solid #888; padding: 10px;">2600.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">1</td>
+                <td style="border: 1px solid #888; padding: 10px;">2600.00</td>
+              </tr>
             </tbody>
             <tfoot>
               <tr style="background: linear-gradient(130deg, #231a6f, #0f054c); color: white; font-weight: bold;">
                 <td colspan="4" style="border: 1px solid #888; padding: 10px;">Total</td>
-                <td style="border: 1px solid #888; padding: 10px;">33,680.00</td>
+                <td style="border: 1px solid #888; padding: 10px;">41,430.00</td>
               </tr>
             </tfoot>
           </table>
@@ -539,7 +594,27 @@
 </section>
 <!-- end Budget section -->
 
-
+<!-- Conclusion Section -->
+<section class="why_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Conclusion</h2>
+    </div>
+    <div style="margin-top: 30px;">
+      <p style="font-size: 16px; line-height: 1.8;">
+        OceanEyes enables environmental authorities and organizations to identify highly polluted areas, 
+        track pollution flow from rivers to the sea, and plan effective cleanup operations. 
+        It not only automates pollution detection but also acts as an early warning system, addressing the 
+        limitations of manual monitoring. The solution is scalable, allowing multiple devices to be deployed 
+        in different locations and integrated into a centralized dashboard for broader environmental monitoring. 
+      </p>
+      <p>
+      We hope that OceanEyes would help users by providing them with real-time, 
+      actionable insights to protect marine ecosystems more efficiently.
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- team section -->
   <section class="team_section layout_padding">
@@ -707,7 +782,7 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +94 75 810 0368
                 </span>
               </a>
               <a href="">
