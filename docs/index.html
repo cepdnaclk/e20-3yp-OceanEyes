@@ -90,27 +90,27 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service.html">Services</a>
-          </li>
-<!--           <li class="nav-item">
-            <a class="nav-link" href="why.html">Why Us</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="team.html">Team</a>
-          </li>
+         <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#introduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Solution_Architecture">Solution Architecture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Hardware_Design">Hardware Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Software_Design">Software Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Demonstration">Demonstration</a>
+            </li>          
+          </ul>
         </ul>
-        <form class="form-inline ml-3">
-          <button class="btn nav_search-btn" type="submit">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </form>
       </div>
 
     </nav>
@@ -119,7 +119,7 @@
 
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
+    <section id="home" class="slider_section ">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -210,7 +210,7 @@
   </div>
 <!-- Introduction section -->
 
-<section class="service_section layout_padding">
+<section id= "introduction" class="service_section layout_padding">
   <div class="service_container">
     <div class="container ">
       <div class="heading_container heading_center">
@@ -251,7 +251,7 @@
 <!-- end Introduction section -->
 
 <!-- features section -->
-<section class="about_section" style="padding: 40px 0;">
+<section id="features" class="about_section" style="padding: 40px 0;">
   <div class="container">
     <div class="heading_container heading_center" style="margin-bottom: 30px;">
       <h2>Features</h2>
@@ -309,7 +309,7 @@
 <!-- end features section -->
 
   <!-- why section -->
-  <section class="why_section layout_padding">
+  <section id="Solution_Architecture" class="why_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -355,7 +355,7 @@
       </section>
 
       <!-- Hardware Design Section -->
-      <section class="why_section layout_padding">
+      <section id="Hardware_Design" class="why_section layout_padding">
         <div class="container">
           <div class="heading_container heading_center">
             <h2>
@@ -363,6 +363,7 @@
             </h2>
           </div>
 
+          
           <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
             <img src="images/cct1.jpg" alt="OceanEyes Buoy" style="width: 500px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
             <img src="images/cct2.jpg" alt="OceanEyes Buoy Side" style="width: 700px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
@@ -374,25 +375,38 @@
         </div>
       </section>
 
-      <!-- Data Flow Section -->
-       <section class="why_section layout_padding">
+     <!-- Data Flow Section -->
+      <section class="why_section layout_padding">
         <div class="container">
           <div class="heading_container heading_center">
             <h2>
               Data <span>Flow</span>
-            </h2></div>
-            <div class="flow-diagram" style="display: flex; justify-content: center; margin-top: 40px; gap: 60px; flex-wrap: wrap;">
-      
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <img src="images/DataFlow.png" alt="Step 1" style="height: 350px;">
+            </h2>
+          </div>
+
+          <div class="flow-diagram" style="display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 40px; flex-wrap: wrap;">
+            
+            <div style="flex: 1; min-width: 300px;">
+              <p>
+                Each monitoring session, called an "instance," can be scheduled or started immediately. 
+                Once initiated, the device performs a series of rotations—typically 90 degrees—to capture images from multiple angles (Capture 1, 2, and 3) 
+                during each turn. After completing a full rotation cycle, the system waits for a defined time before beginning the next turn, 
+                enabling periodic data collection. Captured images are sent to a cloud-based image processing model that analyzes them to detect 
+                and highlight objects of interest, such as floating debris. 
+                The processed outputs, along with time-stamped records, are stored for analysis, allowing comparisons over time.
+              </p>
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+              <img src="images/DataFlow.png" alt="Data Flow Diagram"  style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+
+          </div>
         </div>
-        <p>ADD A DESCRIPTION</p>
-      </div>
-      </div>
-    </section>
+      </section>
+
 
       <!-- Web Application Section -->
-      <section class="why_section layout_padding">
+      <section id="Software_Design" class="why_section layout_padding">
         <div class="container">
           <div class="heading_container heading_center">
             <h2>
@@ -402,16 +416,14 @@
 
           <div class="swiper mySwiper" style="padding-top: 40px;">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="images/website1.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website2.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website3.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website4.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website5.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website6.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website7.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website8.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <div class="swiper-slide"><img src="images/website9.jpg" alt="" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
-              <!-- Add more slides as needed -->
+              <div class="swiper-slide"><img src="images/web1.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web2.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web3.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web5.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web6.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web7.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web8.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
+              <div class="swiper-slide"><img src="images/web9.jpg" alt="" style="width:100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"></div>
             </div>
 
             <!-- Navigation buttons -->
@@ -421,10 +433,8 @@
         </div>
       </section>
 
-
-
        <!-- Demonstration Section -->
-      <section class="why_section layout_padding">
+      <section id="Demonstration" class="why_section layout_padding">
         <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -437,10 +447,45 @@
       </div>
       </div>
     </section>
+<!-- 
+    <section id="testing" class="about_section" style="padding: 40px 0;">
+  <div class="container">
+    <div class="heading_container heading_center" style="margin-bottom: 30px;">
+      <h2>Testing Plan</h2>
+    </div>
+
+    <div class="row">
+
+      Hardware Testing
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/hwtest2.JPG" alt="Hardware Testing">
+          <div>
+            <h4>Hardware Testing</h4>
+            <p>The buoy hardware components, including sensors, GPS, and servo motors, were tested in real-world conditionsusing Ardino. The communication</p>
+          </div>
+        </div>
+      </div>
+
+      Software Testing
+      <div class="col-md-6 mb-4">
+        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
+          <img style="width: 100px;" src="images/test1.JPG" alt="Software Testing">
+          <div>
+            <h4>Software Testing</h4>
+            <p>Web and backend software were tested for accuracy, responsiveness, and data processing under different conditions and device states.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
 
 
   <!-- Testing Section -->
-    <div class="container">
+    <div id="testing" class="container">
       <div class="heading_container heading_center" style="margin-top: 55px;">
     <h2>
       Testing <span>Plan</span>
@@ -617,7 +662,7 @@
 </section>
 
   <!-- team section -->
-  <section class="team_section layout_padding">
+  <section id="team" class="team_section layout_padding">
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
@@ -767,10 +812,10 @@
   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
+        <div class="col-md-6 info_col">
           <div class="info_contact">
             <h4>
-              Address
+              Autonomous Sea Pollution Detection system 
             </h4>
             <div class="contact_link_box">
               <a href="">
@@ -793,9 +838,13 @@
               </a>
             </div>
           </div>
-<!--           <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
+          <div class="info_social">
+            
+            <a href="https://github.com/cepdnaclk/e20-3yp-OceanEyes" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <!-- <a href="https://github.com/cepdnaclk/e20-3yp-OceanEyes" target="_blank" rel="noopener noreferrer">
+                Project Page
             </a>
             <a href="">
               <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -805,54 +854,28 @@
             </a>
             <a href="">
               <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div> -->
-        </div>
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_detail">
-            <h4>
-              Info
-            </h4>
-            <p>
-              Autonomous Sea Pollution Detection & Sea State Monitoring 
-            </p>
+            </a> -->
           </div>
         </div>
         <div class="col-md-6 col-lg-2 mx-auto info_col">
           <div class="info_link_box">
             <h4>
-              Links
+              Links             
             </h4>
             <div class="info_links">
-              <a class="active" href="index.html">
+              <a class="active" href="#home">
                 Home
               </a>
-              <a class="" href="about.html">
-                About
+              <a class="" href="#introduction">
+                Introduction
               </a>
-              <a class="" href="service.html">
-                Services
-              </a>
-<!--               <a class="" href="why.html">
-                Why Us
-              </a> -->
-              <a class="" href="team.html">
-                Team
-              </a>
+              <a href="#Solution_Architecture">Solution Architecture</a>
+              <a href="#Hardware_Design">Hardware Design</a>
+              <a href="#Software_Design">Software Design</a>
+              <a href="#Demonstration">Demonstration</a>
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-6 col-lg-3 info_col ">
-          <h4>
-            Subscribe
-          </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div> -->
       </div>
     </div>
   </section>
