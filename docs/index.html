@@ -108,7 +108,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#Demonstration">Demonstration</a>
-            </li>          
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="#testing">Testing</a>
+            </li>      
           </ul>
         </ul>
       </div>
@@ -264,8 +267,8 @@
         <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
           <img style="width: 100px;" src="images/w1.png" alt="">
           <div>
-            <h4>Pollution Detection</h4>
-            <p>The system detects plastic waste and debris in water and pinpoints their locations, sharing the data with relevant authorities.</p>
+            <h5>Pollution Detection</h5>
+            <p style="font-size: 16px; line-height: 1.5;" >The system detects plastic waste and debris in water and pinpoints their locations, sharing the data with relevant authorities.</p>
           </div>
         </div>
       </div>
@@ -275,8 +278,8 @@
         <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
           <img style="width: 100px;" src="images/w2.png" alt="">
           <div>
-            <h4>Sea State Monitoring</h4>
-            <p>Uses an accelerometer to assess sea conditions and determine whether the sea is calm or rough.</p>
+            <h5>Real Time Monitoring</h5>
+            <p style="font-size: 16px; line-height: 1.5;">Provides real-time monitoring of marine environments, enabling instant detection and reporting of pollution for timely decision-making.</p>
           </div>
         </div>
       </div>
@@ -286,8 +289,8 @@
         <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
           <img style="width: 100px;" src="images/w3.png" alt="">
           <div>
-            <h4>Data Accessibility</h4>
-            <p>Visualizes polluted locations through an intuitive platform accessible by governments, researchers, and the public.</p>
+            <h5>Data Accessibility</h5>
+            <p style="font-size: 16px; line-height: 1.5;">Visualizes polluted locations through an intuitive platform accessible by governments, researchers, and the public.</p>
           </div>
         </div>
       </div>
@@ -297,8 +300,8 @@
         <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
           <img style="width: 100px;" src="images/w4.png" alt="">
           <div>
-            <h4>Environmental Impact</h4>
-            <p>Shares data to increase awareness and helps develop targeted solutions to reduce marine pollution.</p>
+            <h5>Environmental Impact</h5>
+            <p style="font-size: 16px; line-height: 1.5;">Shares data to increase awareness and helps develop targeted solutions to reduce marine pollution.</p>
           </div>
         </div>
       </div>
@@ -347,7 +350,7 @@
             <img src="images/design2.png" alt="OceanEyes Buoy Side" style="width: 500px; height: auto; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
             <img src="images/bouy.JPG" alt="OceanEyes Internal View" style="width: 250px; height: auto; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
           </div>
-          <p><br>The OceanEyes buoy is built using a custom 3D design that gives it a stable, low-drag shape perfect for floating steadily 
+          <p style="font-size: 16px; line-height: 1.8;"><br>The OceanEyes buoy is built using a custom 3D design that gives it a stable, low-drag shape perfect for floating steadily 
             in sea conditions. It's lightweight, and water-resistant, so it doesn't absorb moisture and can stay out at sea for long periods
             without trouble.
           </p>
@@ -368,7 +371,7 @@
             <img src="images/cct1.jpg" alt="OceanEyes Buoy" style="width: 500px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
             <img src="images/cct2.jpg" alt="OceanEyes Buoy Side" style="width: 700px; border-radius: 5px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
             </div>
-          <p><br>The OceanEyes buoy is powered by a Raspberry Pi and equipped with essential modules like GPS, GSM, 
+          <p style="font-size: 16px; line-height: 1.8;"><br>The OceanEyes buoy is powered by a Raspberry Pi and equipped with essential modules like GPS, GSM, 
             and sensors for detection and communication. It runs on a solar-powered battery system, making it energy-efficient and ideal for long-term deployment in the ocean. 
             The setup ensures reliable data collection and transmission with minimal maintenance.
           </p>
@@ -387,12 +390,12 @@
           <div class="flow-diagram" style="display: flex; justify-content: center; align-items: center; margin-top: 40px; gap: 40px; flex-wrap: wrap;">
             
             <div style="flex: 1; min-width: 300px;">
-              <p>
+              <p style="font-size: 16px; line-height: 1.8;"></p>
                 Each monitoring session, called an "instance," can be scheduled or started immediately. 
-                Once initiated, the device performs a series of rotations—typically 90 degrees—to capture images from multiple angles (Capture 1, 2, and 3) 
+                Once initiated, the device performs a series of rotations —in 90 degrees— to capture images from multiple angles (Capture 1, 2, and 3) 
                 during each turn. After completing a full rotation cycle, the system waits for a defined time before beginning the next turn, 
                 enabling periodic data collection. Captured images are sent to a cloud-based image processing model that analyzes them to detect 
-                and highlight objects of interest, such as floating debris. 
+                and highlight objects of interest, such as floating debris. Additionally, it classifies the object identified into differnt pollutant types.
                 The processed outputs, along with time-stamped records, are stored for analysis, allowing comparisons over time.
               </p>
             </div>
@@ -447,77 +450,45 @@
       </div>
       </div>
     </section>
-<!-- 
-    <section id="testing" class="about_section" style="padding: 40px 0;">
-  <div class="container">
-    <div class="heading_container heading_center" style="margin-bottom: 30px;">
-      <h2>Testing Plan</h2>
-    </div>
-
-    <div class="row">
-
-      Hardware Testing
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
-          <img style="width: 100px;" src="images/hwtest2.JPG" alt="Hardware Testing">
-          <div>
-            <h4>Hardware Testing</h4>
-            <p>The buoy hardware components, including sensors, GPS, and servo motors, were tested in real-world conditionsusing Ardino. The communication</p>
-          </div>
-        </div>
-      </div>
-
-      Software Testing
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-start" style="gap: 20px; padding: 20px; border-radius: 10px; height: 100%;">
-          <img style="width: 100px;" src="images/test1.JPG" alt="Software Testing">
-          <div>
-            <h4>Software Testing</h4>
-            <p>Web and backend software were tested for accuracy, responsiveness, and data processing under different conditions and device states.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-
-
 
   <!-- Testing Section -->
-    <div id="testing" class="container">
-      <div class="heading_container heading_center" style="margin-top: 55px;">
-    <h2>
-      Testing <span>Plan</span>
-    </h2></div>
-    <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
+    <div id="testing" class="about_section" style="padding: 20px 0;">
+      <div class="container">
+      <div class="heading_container heading_center" style="margin-top: 30px;">
+              <h2>
+                Testing <span>Plan</span>
+              </h2>
+              <p style="font-size: 16px; line-height: 1.8; margin-top: 15px;"><br>Testing was a critical phase in validating the performance and reliability of the OceanEyes system. Hardware testing involved verifying the functionality of sensors, GPS, GSM, and servo motors in real-world marine-like conditions to ensure durability and accurate data collection. Software testing included checking the responsiveness of the web platform, real-time data updates, image processing accuracy, and backend stability under different network and load conditions. Together, these tests ensured that both hardware and software components work seamlessly to deliver reliable, real-time insights for marine pollution monitoring.</p>
+      </div>
+              <div style="display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap;">
 
-  <!-- Hardware Testing -->
-  <div style="text-align: center; margin-top: 20px;">
-    <h5 >Hardware Testing</h5>
-    <img src="images/hwtest2.JPG" alt="Hardware Testing" style="max-width: 100%; height: 350px; width: 500px;">
-  </div>
+            <!-- Hardware Testing -->
+            <div style="text-align: center; margin-top: 20px;">
+              <h6>Hardware Testing</h6>
+              <img src="images/hwtest2.JPG" alt="Hardware Testing" style="max-width: 100%; height: auto; width: 500px;">
+            </div>
 
-  <!-- Software Testing -->
-  <div style="text-align: center; margin-top: 20px;">
-    <h5>Software Testing</h5>
-    <img src="images/test1.JPG" alt="Software Testing" style="max-width: 100%; height: 350px; width: 500px;">
-  </div>
+            <!-- Software Testing -->
+            <div style="text-align: center; margin-top: 20px;">
+              <h6>Software Testing</h6>
+              <img src="images/test1.JPG" alt="Software Testing" style="max-width: 100%; height: auto; width: 500px;">
+            </div>
 
-  <!-- Load Testing -->
-  <div style="text-align: center; margin-top: 20px;">
-    <h5>Load Testing</h5>
-    <img src="images/test3.JPG" alt="Software Testing" style="max-width: 100%; height: 350px; width: 500px;">
-  </div>
-  <!-- Performace Testing -->
-  <div style="text-align: center; margin-top: 20px;">
-    <h5>Performace Testing</h5>
-    <img src="images/test4.jpg" alt="Software Testing" style="max-width: 100%; height: 350px; width: 500px;">
-  </div>
-</div>
-</div>
+            <!-- Load Testing -->
+            <div style="text-align: center; margin-top: 20px;">
+              <h6>Load Testing</h6>
+              <img src="images/test3.JPG" alt="Software Testing" style="max-width: 100%; height: auto; width: 500px;">
+            </div>
+            <!-- Performace Testing -->
+            <div style="text-align: center; margin-top: 20px;">
+              <h6>Performace Testing</h6>
+              <img src="images/test4.JPG" alt="Software Testing" style="max-width: 100%; height: auto; width: 500px;">
+            </div>
+          </div>
+          </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
